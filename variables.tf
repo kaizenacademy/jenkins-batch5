@@ -9,3 +9,7 @@ variable az {
 variable key {
     type = string
 }
+
+variable ami_id {
+    type = string
+}
