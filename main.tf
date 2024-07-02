@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-06c68f701d8090592"
+  ami                    = var.ami_id
   instance_type          = "t2.micro"
-  availability_zone      = "us-east-1a"
-  key_name               = "my-laptop-key"
+  availability_zone      = var.az
+  key_name               = var.key
 }
